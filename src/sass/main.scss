@@ -1,0 +1,23 @@
+/* Core variables */
+@import './utils/vars';
+
+/* CSS Reset */
+@import './base/reset';
+
+/* Fonts */
+@import './base/fonts';
+
+/* Mixins, helpers and functions */
+@import './utils/mixins';
+
+/* Adding Font Awesome*/
+@import './base/fontawesome/fontawesome.scss';
+@import './base/fontawesome/solid.scss';
+@import './base/fontawesome/brands.scss';
+
+/* Adding breakpoints */
+@import './utils/breakpoints.scss';
+
+/* Components */
+@import './layout/body.scss';
+@import './layout/container.scss';
