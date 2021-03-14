@@ -100,7 +100,6 @@
   transform: translateY(-50%);
   transition: transform 250ms $timing-function;
 
-  .form__input:hover + &,
   .form__input:focus + &,
   .form__input:not(:placeholder-shown) + & {
     top: 0;
