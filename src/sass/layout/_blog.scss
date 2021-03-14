@@ -1,0 +1,109 @@
+.blog {
+  color: $white;
+  background-color: $blog-color;
+
+  @include mobile() {
+    &::before {
+      display: block;
+      content: '';
+      width: 100%;
+      max-width: 700px;
+      height: 247px;
+
+      margin-left: auto;
+      margin-right: auto;
+
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-image: url('../images/home/blog.jpg');
+
+      @media screen and (max-width: $tablet - 1px) and (min-device-pixel-ratio: 2),
+        screen and (max-width: $tablet - 1px) and (min-resolution: 192dpi),
+        screen and (max-width: $tablet - 1px) and (min-resolution: 2dppx) {
+        background-image: url('../images/home/blog@2x.jpg');
+      }
+    }
+  }
+  @include tablet() {
+    display: flex;
+
+    &::after {
+      display: block;
+      content: '';
+      width: calc(100% / 2);
+      max-width: 700px;
+      height: 468px;
+
+      margin-left: auto;
+      margin-right: auto;
+
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+
+      @include tablet() {
+        background-image: url('../images/home/blog.jpg');
+      }
+      @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) and (min-device-pixel-ratio: 2),
+        screen and (min-width: $tablet) and (max-width: $desktop - 1px) and (min-resolution: 192dpi),
+        screen and (min-width: $tablet) and (max-width: $desktop - 1px) and (min-resolution: 2dppx) {
+        background-image: url('../images/home/blog@2x.jpg');
+      }
+      @include desktop() {
+        height: 517px;
+        background-image: url('../images/home/blog.jpg');
+      }
+      @media screen and (min-width: $desktop) and (min-device-pixel-ratio: 2),
+        screen and (min-width: $desktop) and (min-resolution: 192dpi),
+        screen and (min-width: $desktop) and (min-resolution: 2dppx) {
+        background-image: url('../images/home/blog@2x.jpg');
+      }
+    }
+  }
+}
+.blog__wrapper {
+  padding: 30px;
+
+  @include tablet() {
+    padding: 30px 40px 30px 30px;
+    width: calc(100% / 2);
+  }
+  @include desktop() {
+    padding: 112px 40px 112px 30px;
+  }
+}
+.blog__date {
+  margin-bottom: 5px;
+
+  font-size: 18px;
+  line-height: 1.66;
+
+  @include tablet() {
+    font-size: 20px;
+    line-height: 1.65;
+  }
+}
+.blog__title {
+  margin-bottom: 25px;
+
+  font-weight: 300;
+  font-size: 38px;
+  line-height: 1.26;
+}
+.blog__text {
+  margin-bottom: 14px;
+
+  font-size: 16px;
+  line-height: 1.6;
+
+  @include tablet() {
+    margin-bottom: 20px;
+
+    font-size: 18px;
+    line-height: 1.56;
+  }
+  @include desktop() {
+    margin-bottom: 17px;
+  }
+}
