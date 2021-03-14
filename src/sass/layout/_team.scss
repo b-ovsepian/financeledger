@@ -128,8 +128,8 @@
 
   transition: transform 250ms $timing-function, border 250ms $timing-function;
 
-  .team__item:hover &,
-  .team__item:focus & {
+  .thumb:hover &,
+  .thumb:focus & {
     transform: scale(1.02);
     box-shadow: 5px rgba(0, 5, 97, 0.1);
   }

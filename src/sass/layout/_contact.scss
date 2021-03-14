@@ -1,0 +1,110 @@
+.contact {
+  @include tablet() {
+    display: flex;
+  }
+
+  &::before {
+    display: block;
+    content: '';
+    width: 100%;
+    max-width: 700px;
+    height: 220px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @include mobile() {
+      background-image: url('../images/home/contact.jpg');
+    }
+    @media screen and (max-width: $tablet - 1px) and (min-device-pixel-ratio: 2),
+      screen and (max-width: $tablet - 1px) and (min-resolution: 192dpi),
+      screen and (max-width: $tablet - 1px) and (min-resolution: 2dppx) {
+      background-image: url('../images/home/contact@2x.jpg');
+    }
+    @include tablet() {
+      width: calc(100% / 2);
+      height: 349px;
+      background-image: url('../images/home/contact.jpg');
+    }
+    @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) and (min-device-pixel-ratio: 2),
+      screen and (min-width: $tablet) and (max-width: $desktop - 1px) and (min-resolution: 192dpi),
+      screen and (min-width: $tablet) and (max-width: $desktop - 1px) and (min-resolution: 2dppx) {
+      background-image: url('../images/home/contact@2x.jpg');
+    }
+    @include desktop() {
+      height: 460px;
+      background-image: url('../images/home/contact.jpg');
+    }
+    @media screen and (min-width: $desktop) and (min-device-pixel-ratio: 2),
+      screen and (min-width: $desktop) and (min-resolution: 192dpi),
+      screen and (min-width: $desktop) and (min-resolution: 2dppx) {
+      background-image: url('../images/home/contact@2x.jpg');
+    }
+  }
+}
+.contact__wrapper {
+  padding: 26px 30px;
+
+  @include tablet() {
+    width: calc(100% / 2);
+  }
+  @include desktop() {
+    padding: 78px 30px;
+  }
+}
+.contact__title {
+  margin-bottom: 34px;
+
+  font-weight: 300;
+  font-size: 38px;
+  line-height: 1.26;
+}
+.form__field {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: 36px;
+  }
+  &:nth-child(2) {
+    margin-bottom: 53px;
+
+    @include desktop() {
+      margin-bottom: 60px;
+    }
+  }
+}
+.form__input {
+  padding: 5px;
+  width: 100%;
+  height: 40px;
+
+  background: $white;
+  border: 1px solid $body-background-color;
+  outline-color: $accent-color;
+
+  font-size: 18px;
+  line-height: 1.56;
+}
+.form__label {
+  position: absolute;
+
+  top: 50%;
+  left: 5px;
+
+  color: $form-color;
+
+  transform: translateY(-50%);
+  transition: transform 250ms $timing-function;
+
+  .form__input:hover + &,
+  .form__input:focus + &,
+  .form__input:not(:placeholder-shown) + & {
+    top: 0;
+    transform: translateY(calc(-100% - 4px));
+    color: $accent-color;
+  }
+}
