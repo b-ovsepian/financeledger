@@ -14,3 +14,11 @@
     padding-top: 11px;
   }
 }
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  opacity: 0.8;
+  background-color: $text-color;
+}
