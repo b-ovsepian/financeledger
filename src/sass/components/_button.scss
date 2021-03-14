@@ -1,0 +1,77 @@
+.button {
+  display: inline-block;
+  font-family: inherit;
+
+  min-width: 165px;
+  height: 48px;
+
+  border-radius: 5px;
+
+  font-size: 18px;
+  line-height: 1.56;
+  text-align: center;
+
+  outline-color: $white;
+
+  transition: color 250ms $timing-function,
+    background-color 250ms $timing-function;
+
+  cursor: pointer;
+
+  @extend %fa-icon;
+  @extend .fas;
+
+  &:before {
+    display: inline-block;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: fa-content($fa-var-angle-right);
+    margin-right: 5px;
+  }
+}
+
+.button.primary {
+  color: $white;
+  background-color: $accent-color;
+
+  opacity: 1;
+  border: none;
+
+  transition: opacity 250ms $timing-function;
+
+  &:hover,
+  &:focus {
+    opacity: 0.9;
+  }
+}
+
+// .button.secondary {
+//   color: $hover-color;
+//   background-color: $light-background-color;
+//   border: 2px solid $hover-color;
+
+//   &:hover,
+//   &:focus {
+//     color: $light-background-color;
+//     background-color: $hover-color;
+//   }
+
+//   @media screen and(max-width: $tablet - 1px) {
+//     background-color: transparent;
+//   }
+// }
+
+// @media screen and (min-width: $desktop) {
+//   .button {
+//     min-width: 354px;
+//     height: 70px;
+
+//     padding: 26px 24px;
+
+//     font-weight: 700;
+//     font-size: 14px;
+//     line-height: 1.21;
+
+//     letter-spacing: 0.14em;
+//   }
+// }
