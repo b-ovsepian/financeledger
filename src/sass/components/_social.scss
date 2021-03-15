@@ -17,6 +17,11 @@
 
   transition: color 250ms $timing-function, opacity 250ms $timing-function;
 }
+.social_size_s {
+  @media screen and (min-width: $tablet) and (max-width: $desktop) {
+    font-size: 20px;
+  }
+}
 .social_theme_green {
   &:hover,
   &:focus {
